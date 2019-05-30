@@ -1,24 +1,17 @@
-![image](https://user-images.githubusercontent.com/34389545/35821974-62e0e25c-0a70-11e8-87dd-2cfffeb6ed47.png)
+![image](https://avatars3.githubusercontent.com/u/45854820?s=200&v=4)
 
-#### Master Build Status
-[![Build Status](https://travis-ci.org/turtlecoin/turtlecoin.svg?branch=master)](https://travis-ci.org/turtlecoin/turtlecoin) [![Build status](https://ci.appveyor.com/api/projects/status/github/turtlecoin/turtlecoin?branch=master&svg=true)](https://ci.appveyor.com/project/RocksteadyTC/turtlecoin)
+# Kegcoin Gold
 
-#### Development Build Status
-[![Build Status](https://travis-ci.org/turtlecoin/turtlecoin.svg?branch=development)](https://travis-ci.org/turtlecoin/turtlecoin) [![Build status](https://ci.appveyor.com/api/projects/status/github/turtlecoin/turtlecoin?branch=development&svg=true)](https://ci.appveyor.com/project/RocksteadyTC/turtlecoin)
+Kegcoin Gold is a ASIC resistant altcoin made with value and cheap transactions in mind, it has a block time of 30 seconds and low fees. It uses it's own algorithm called [keghash](https://github.com/LeoCornelius/keghash).
 
-### Installing
-
-We offer binary images of the latest releases here: http://latest.turtlecoin.lol
-
-If you would like to compile yourself, read on.
+| **General** | **Master build status** | **Development build status** |
+|-------------|-------------------------|------------------------------|
+| ![GitHub repo size](https://img.shields.io/github/repo-size/kegcoin-project/kegcoin-gold.svg?label=Repository%20size%3A&style=popout-square) | [![Travis master branch](https://img.shields.io/travis/kegcoin-project/kegcoin-gold/master.svg?label=TravisCI&style=popout-square)](https://travis-ci.org/kegcoin-project/kegcoin-gold) | [![Travis development branch](https://img.shields.io/travis/kegcoin-project/kegcoin-gold/development.svg?label=TravisCI&style=popout-square)](https://travis-ci.org/kegcoin-project/kegcoin-gold) |
+| [![GitHub issues](https://img.shields.io/github/issues-raw/kegcoin-project/kegcoin-gold.svg?label=Issues%20that%20need%20help%3A&style=popout-square)](https://github.com/kegcoin-project/kegcoin-gold/issues) | [![AppVeyor master branch](https://img.shields.io/appveyor/ci/TheDevMinerTV/kegcoin-gold/master.svg?label=AppVeyor&style=popout-square)](https://ci.appveyor.com/project/TheDevMinerTV/kegcoin-gold) | [![AppVeyor development branch](https://img.shields.io/appveyor/ci/TheDevMinerTV/kegcoin-gold/development.svg?label=AppVeyor&style=popout-square)](https://ci.appveyor.com/project/TheDevMinerTV/kegcoin-gold) |
+| [![GitHub Releases](https://img.shields.io/github/downloads/kegcoin-project/kegcoin-gold/total.svg?style=flat-square)](https://github.com/kegcoin-project/kegcoin-gold/releases) | | |
+| [![Discord](https://img.shields.io/discord/546368529579114517.svg?label=Discord&style=popout-square)](https://discord.gg/WffDKjF) | | |
 
 ### How To Compile
-
-#### Build Optimization
-
-The CMake build system will, by default, create optimized *native* builds for your particular system type when you build the software. Using this method, the binaries created provide a better experience and all together faster performance.
-
-However, if you wish to create *portable* binaries that can be shared between systems, specify `-DARCH=default` in your CMake arguments during the build process. Note that *portable* binaries will have a noticable difference in performance than *native* binaries. For this reason, it is always best to build for your particular system if possible.
 
 #### Linux
 
@@ -41,8 +34,8 @@ If you are using Clang, you will need Clang 6.0 or higher. You will also need li
 - `sudo pip install cmake`
 - `export CC=gcc-8`
 - `export CXX=g++-8`
-- `git clone -b master --single-branch https://github.com/turtlecoin/turtlecoin`
-- `cd turtlecoin`
+- `git clone -b master --single-branch https://github.com/kegcoin-project/kegcoingold`
+- `cd kegcoingold`
 - `mkdir build`
 - `cd build`
 - `cmake ..`
@@ -51,7 +44,7 @@ If you are using Clang, you will need Clang 6.0 or higher. You will also need li
 The binaries will be in the `src` folder when you are complete.
 
 - `cd src`
-- `./TurtleCoind --version`
+- `./kegcoind --version`
 
 ##### Ubuntu, using Clang
 
@@ -75,8 +68,8 @@ You need to modify the below command for your version of ubuntu - see https://ap
 - `sudo pip install cmake`
 - `export CC=clang-6.0`
 - `export CXX=clang++-6.0`
-- `git clone -b master --single-branch https://github.com/turtlecoin/turtlecoin`
-- `cd turtlecoin`
+- `git clone -b master --single-branch https://github.com/kegcoin-project/kegcoingold`
+- `cd kegcoingold`
 - `mkdir build`
 - `cd build`
 - `cmake ..`
@@ -85,7 +78,7 @@ You need to modify the below command for your version of ubuntu - see https://ap
 The binaries will be in the `src` folder when you are complete.
 
 - `cd src`
-- `./TurtleCoind --version`
+- `./kegcoind --version`
 
 ##### Generic Linux
 
@@ -94,8 +87,8 @@ Ensure you have the dependencies listed above.
 If you want to use clang, ensure you set the environment variables `CC` and `CXX`.
 See the ubuntu instructions for an example.
 
-- `git clone -b master --single-branch https://github.com/turtlecoin/turtlecoin`
-- `cd turtlecoin`
+- `git clone -b master --single-branch https://github.com/kegcoin-project/kegcoingold`
+- `cd kegcoingold`
 - `mkdir build`
 - `cd build`
 - `cmake ..`
@@ -104,7 +97,31 @@ See the ubuntu instructions for an example.
 The binaries will be in the `src` folder when you are complete.
 
 - `cd src`
-- `./TurtleCoind --version`
+- `./kegcoind --version`
+
+#### OSX/Apple, using GCC
+
+##### Prerequisites
+
+- Install XCode and Developer Tools.
+
+##### Building
+
+- `which brew || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+- `brew install --force cmake boost llvm gcc@8 openssl`
+- `export CC=gcc-8`
+- `export CXX=g++-8`
+- `git clone -b master --single-branch https://github.com/kegcoin-project/kegcoingold`
+- `cd kegcoingold`
+- `mkdir build`
+- `cd build`
+- `cmake ..`
+- `make`
+
+The binaries will be in the `src` folder when you are complete.
+
+- `cd src`
+- `./kegcoind --version`
 
 #### OSX/Apple, using Clang
 
@@ -118,8 +135,8 @@ The binaries will be in the `src` folder when you are complete.
 - `brew install --force cmake boost llvm openssl`
 - `export CC=/usr/local/opt/llvm/bin/clang`
 - `export CXX=/usr/local/opt/llvm/bin/clang++`
-- `git clone -b master --single-branch https://github.com/turtlecoin/turtlecoin`
-- `cd turtlecoin`
+- `git clone -b master --single-branch https://github.com/kegcoin-project/kegcoingold`
+- `cd kegcoingold`
 - `mkdir build`
 - `cd build`
 - `cmake ..`
@@ -128,28 +145,25 @@ The binaries will be in the `src` folder when you are complete.
 The binaries will be in the `src` folder when you are complete.
 
 - `cd src`
-- `./TurtleCoind --version`
+- `./kegcoind --version`
+
 
 #### Windows
 
 ##### Prerequisites
-
-You can build for 32-bit or 64-bit Windows. **If you're not sure, pick 64-bit.**
-
+- You will need to install [cmake](https://cmake.org/download) (3.8 or higher)
 - Install [Visual Studio 2017 Community Edition](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&page=inlineinstall)
 - When installing Visual Studio, it is **required** that you install **Desktop development with C++**
 - Install the latest version of Boost (currently Boost 1.68). Select the appropriate version for your system:
   - [Boost 64-bit](https://bintray.com/boostorg/release/download_file?file_path=1.68.0%2Fbinaries%2Fboost_1_68_0-msvc-14.1-64.exe)
-  - [Boost 32-bit](https://bintray.com/boostorg/release/download_file?file_path=1.68.0%2Fbinaries%2Fboost_1_68_0-msvc-14.1-32.exe)
 - Install the latest full version of OpenSSL (currently OpenSSL 1.1.1b). Select the appropriate version for your system:
   - [OpenSSL 64-bit](https://slproweb.com/download/Win64OpenSSL-1_1_1b.exe)
-  - [OpenSSL 32-bit](https://slproweb.com/download/Win32OpenSSL-1_1_1b.exe)
 
 ##### Building
 
 For 64-bit:
 - From the start menu, open 'x64 Native Tools Command Prompt for vs2017'.
-- `cd <your_turtlecoin_directory>`
+- `cd <your_kegcoin_directory>`
 - `mkdir build`
 - `cd build`
 - `set PATH="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin";%PATH%`
@@ -169,19 +183,45 @@ The binaries will be in the `src/Release` folder when you are complete.
 
 - `cd src`
 - `cd Release`
-- `TurtleCoind.exe --version`
+- `kegcoind.exe --version`
+
+#### Raspberry Pi 3 B+ (AARCH64/ARM64)
+The following images are known to work. Your operation system image **MUST** be 64 bit.
+
+##### Known working images
+
+- https://github.com/Crazyhead90/pi64/releases
+- https://fedoraproject.org/wiki/Architectures/ARM/Raspberry_Pi#aarch64_supported_images_for_Raspberry_Pi_3
+- https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-3
+
+Once you have a 64 bit image installed, setup proceeds the same as any Linux distribution. Ensure you have at least 2GB of ram, or the build is likely to fail. You may need to setup swap space.
+
+##### Building
+
+- `git clone -b master --single-branch https://github.com/kegcoin-project/kegcoingold`
+- `cd kegcoin`
+- `mkdir build`
+- `cd build`
+- `cmake ..`
+- `make`
+
+The binaries will be in the `src` folder when you are complete.
+
+- `cd src`
+- `./kegcoind --version`
 
 #### Thanks
-Cryptonote Developers, Bytecoin Developers, Monero Developers, Forknote Project, TurtleCoin Community
+Cryptonote Developers, Bytecoin Developers, Monero Developers, Forknote Project, TurtleCoin Community and kegcoin gold evelopers
 
 ### Copypasta for license when editing files
 
-Hi TurtleCoin contributor, thanks for forking and sending back Pull Requests. Extensive docs about contributing are in the works or elsewhere. For now this is the bit we need to get into all the files we touch. Please add it to the top of the files, see [src/CryptoNoteConfig.h](https://github.com/turtlecoin/turtlecoin/commit/28cfef2575f2d767f6e512f2a4017adbf44e610e) for an example.
+Hi Kegcoin Gold contributor, thanks for forking and sending back Pull Requests. Extensive docs about contributing are in the works or elsewhere. For now this is the bit we need to get into all the files we touch. Please add it to the top of the files.
 
 ```
 // Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
 // Copyright (c) 2014-2018, The Monero Project
 // Copyright (c) 2018-2019, The TurtleCoin Developers
+// Copyright (c) 2019, The Kegcoin Gold Developers
 //
 // Please see the included LICENSE file for more information.
 ```

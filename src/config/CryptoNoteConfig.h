@@ -55,7 +55,7 @@ static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) !
    to import from when the block height cannot be found in the node or the node is offline. 
    */
    //TODO:
-const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 0;
+const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 1551167845;
 
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 100000; //size of block (bytes) after which reward for block calculated using block size
@@ -255,7 +255,12 @@ const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 {
     {  0x14, 0x50, 0x47, 0x25, 0x45, 0x6f, 0x6b, 0x8b, 0x56, 0x38, 0x01, 0x22, 0x12, 0x2a, 0x02, 0x35  }
 };
-
+// Not yet used (hopfully never)
+const char* const SUPER_NODE = "99.248.93.15:5047"; // The centrilised node that 
+/* can be used if we get attacked (and the chain forks into manny chains) 
+   and need to chosse one chain out of forked ones
+   (only used when needed)
+*/
 const char* const SEED_NODES[] = {
   "99.248.93.15:5047", // def (mine2.live)
   "139.59.197.203:5047" // Kegcoin project (load balancer)
