@@ -12,7 +12,7 @@
 #include <limits>
 #include <initializer_list>
 #include <boost/uuid/uuid.hpp>
-#include <"peers.h">
+#include <peers.h>
 
 namespace CryptoNote {
 namespace parameters {
