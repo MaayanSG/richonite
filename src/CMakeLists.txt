@@ -176,11 +176,11 @@ add_dependencies(WalletService version)
 add_dependencies(zedwallet version)
 
 # Finally build the binaries
-set_property(TARGET TurtleCoind PROPERTY OUTPUT_NAME "kegcoind")
-set_property(TARGET zedwallet PROPERTY OUTPUT_NAME "kegwallet")
-set_property(TARGET zedwallet++ PROPERTY OUTPUT_NAME "kegwallet-beta")
-set_property(TARGET WalletService PROPERTY OUTPUT_NAME "kegcoin-service")
-set_property(TARGET miner PROPERTY OUTPUT_NAME "kegminer")
+set_property(TARGET TurtleCoind PROPERTY OUTPUT_NAME "richd")
+set_property(TARGET zedwallet PROPERTY OUTPUT_NAME "richwallet")
+set_property(TARGET zedwallet++ PROPERTY OUTPUT_NAME "richwallet-beta")
+set_property(TARGET miner PROPERTY OUTPUT_NAME "richminer")
+set_property(TARGET WalletService PROPERTY OUTPUT_NAME "rich-service")
 set_property(TARGET cryptotest PROPERTY OUTPUT_NAME "cryptotest")
 set_property(TARGET WalletApi PROPERTY OUTPUT_NAME "wallet-api")
 
