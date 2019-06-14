@@ -18,13 +18,13 @@
 namespace CryptoNote {
 namespace parameters {
 
-const uint64_t DIFFICULTY_TARGET                             = 24; // seconds
+const uint64_t DIFFICULTY_TARGET                             = 15; // seconds
 
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 10000000;
 const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 3121939;
-const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 5; // (set to 5 or more)
+const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 5;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V3         = 3 * DIFFICULTY_TARGET;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V4         = 6 * DIFFICULTY_TARGET;
@@ -33,17 +33,17 @@ const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V3          = 11;
 
 // MONEY_SUPPLY - total number coins to be generated
-const uint64_t MONEY_SUPPLY                                  = UINT64_C(10000000000000000); // 100 Trillion
-const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 187000; // set to early on
+const uint64_t MONEY_SUPPLY                                  = (uint64_t)(-1); // Next to infinite.
+const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 0; // set to early on
 const size_t   ZAWY_DIFFICULTY_V2                            = 0;
 const uint8_t  ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION      = 3;
 
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 620000; // after ZAWY_DIFF_BLOCK_INDEX
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 700000; // after LWMA_2_DIFFICULTY_BLOCK_INDEX
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 800000; // after LWMA_2_DIFFICULTY_BLOCK_INDEX_V2
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 0; // after ZAWY_DIFF_BLOCK_INDEX
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 1; // after LWMA_2_DIFFICULTY_BLOCK_INDEX
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 2; // after LWMA_2_DIFFICULTY_BLOCK_INDEX_V2
   
 
-const uint64_t LWMA_3_DIFFICULTY_BLOCK_INDEX                 = 2000000; // after LWMA_2_DIFFICULTY_BLOCK_INDEX_V3
+const uint64_t LWMA_3_DIFFICULTY_BLOCK_INDEX                 = 3; // after LWMA_2_DIFFICULTY_BLOCK_INDEX_V3
 const uint64_t DIFFICULTY_CHANGE_BLOCK_INDEX                 = 220700;
 
 const unsigned EMISSION_SPEED_FACTOR                         = 26; // This is not used any more (difrent block reward algo)
@@ -155,10 +155,10 @@ static_assert(UPGRADE_VOTING_WINDOW > 1, "Bad UPGRADE_VOTING_WINDOW");
 
 /* Block heights we are going to have hard forks at */
 const uint64_t FORK_HEIGHTS[] =
-{}; // THIS FUCK CAN'T BE EMPTY; THIS WONT COMPILE
-
+{  1,
+   2,}; // place holders
 /* MAKE SURE TO UPDATE THIS VALUE WITH EVERY MAJOR RELEASE BEFORE A FORK */
-const uint64_t SOFTWARE_SUPPORTED_FORK_INDEX                 = 0;
+const uint64_t SOFTWARE_SUPPORTED_FORK_INDEX                 = 1;
 
 const uint64_t FORK_HEIGHTS_SIZE = sizeof(FORK_HEIGHTS) / sizeof(*FORK_HEIGHTS);
 
@@ -219,7 +219,7 @@ const uint8_t P2P_LITE_BLOCKS_PROPOGATION_VERSION            = 4;
 const uint8_t  P2P_UPGRADE_WINDOW                            = 1;
 
 const size_t   P2P_CONNECTION_MAX_WRITE_BUFFER_SIZE          = 32 * 1024 * 1024; // 32 MB
-const uint32_t P2P_DEFAULT_CONNECTIONS_COUNT                 = 8;             // MAKE THIS BIGGER WHEN PLANNING ON A LARGE AMOUT OF NODES
+const uint32_t P2P_DEFAULT_CONNECTIONS_COUNT                 = 15;             // faster syncing
 const size_t   P2P_DEFAULT_WHITELIST_CONNECTIONS_PERCENT     = 70;
 const uint32_t P2P_DEFAULT_HANDSHAKE_INTERVAL                = 60;            // seconds
 const uint32_t P2P_DEFAULT_PACKET_MAX_SIZE                   = 50000000;      // 50000000 bytes maximum packet size
