@@ -1,4 +1,5 @@
-// Copywrite 2019 The Kegcoin Gold Devopers
+// Copyright 2019 The Kegcoin Gold Devopers
+// Copyright 2019 The Richonite Devopers
 
 /*This file will be used to read a peer list from the realsed folder 
 (a peerlist will be supplied with the realeases)
