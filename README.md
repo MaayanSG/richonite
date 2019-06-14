@@ -9,7 +9,7 @@ Kegcoin Gold is a ASIC resistant altcoin made with value and cheap transactions 
 | ![GitHub repo size](https://img.shields.io/github/repo-size/richonite/richonite.svg?label=Repository%20size%3A&style=popout-square) | [![Travis master branch](https://img.shields.io/travis/richonite/richonite/master.svg?label=TravisCI&style=popout-square)](https://travis-ci.org/richonite/richonite) | [![Travis development branch](https://img.shields.io/travis/richonite/richonite/development.svg?label=TravisCI&style=popout-square)](https://travis-ci.org/richonite/richonite) |
 | [![GitHub issues](https://img.shields.io/github/issues-raw/richonite/richonite.svg?label=Issues%20that%20need%20help%3A&style=popout-square)](https://github.com/richonite/richonite/issues) | [![AppVeyor master branch](https://img.shields.io/appveyor/ci/TheDevMinerTV/richonite/master.svg?label=AppVeyor&style=popout-square)](https://ci.appveyor.com/project/TheDevMinerTV/kegcoin-gold) | [![AppVeyor development branch](https://img.shields.io/appveyor/ci/TheDevMinerTV/kegcoin-gold/development.svg?label=AppVeyor&style=popout-square)](https://ci.appveyor.com/project/TheDevMinerTV/kegcoin-gold) |
 | [![GitHub Releases](https://img.shields.io/github/downloads/richonite/richonite/total.svg?style=flat-square)](https://github.com/richonite/richonite/releases) | | |
-| [![Discord](https://img.shields.io/discord/546368529579114517.svg?label=Discord&style=popout-square)](https://discord.gg/WffDKjF) | | |
+| [![Discord](https://img.shields.io/discord/574576489023143947.svg?label=Discord&style=popout-square)](https://discord.gg/BXAn8uk) | | |
 
 ### How To Compile
 
