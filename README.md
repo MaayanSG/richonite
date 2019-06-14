@@ -1,8 +1,8 @@
-![image](https://avatars3.githubusercontent.com/u/45854820?s=200&v=4)
+![image](https://avatars0.githubusercontent.com/u/50295097?s=200&v=4)
 
 # Richonite
 
-Kegcoin Gold is a ASIC resistant altcoin made with value and cheap transactions in mind, it has a block time of 30 seconds and low fees. It uses it's own algorithm called [keghash](https://github.com/LeoCornelius/keghash).
+Richonite is a ASIC resistant altcoin made with value and cheap transactions in mind, it has a block time of 30 seconds and low fees. It uses it's own algorithm called richnite.
 
 | **General** | **Master build status** | **Development build status** |
 |-------------|-------------------------|------------------------------|
