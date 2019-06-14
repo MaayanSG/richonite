@@ -23,8 +23,8 @@ const uint64_t DIFFICULTY_TARGET                             = 24; // seconds
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 10000000;
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x2fa313; //all addresses start with Rich
-const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 2;
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 3121939;
+const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 5; // (set to 5 or more)
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V3         = 3 * DIFFICULTY_TARGET;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V4         = 6 * DIFFICULTY_TARGET;
@@ -34,16 +34,16 @@ const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V3          = 11;
 
 // MONEY_SUPPLY - total number coins to be generated
 const uint64_t MONEY_SUPPLY                                  = UINT64_C(10000000000000000); // 100 Trillion
-const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 187000;
+const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 187000; // set to early on
 const size_t   ZAWY_DIFFICULTY_V2                            = 0;
 const uint8_t  ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION      = 3;
 
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 620000;
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 700000;
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 800000;
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 620000; // after ZAWY_DIFF_BLOCK_INDEX
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 700000; // after LWMA_2_DIFFICULTY_BLOCK_INDEX
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 800000; // after LWMA_2_DIFFICULTY_BLOCK_INDEX_V2
   
 
-const uint64_t LWMA_3_DIFFICULTY_BLOCK_INDEX                 = 2000000;
+const uint64_t LWMA_3_DIFFICULTY_BLOCK_INDEX                 = 2000000; // after LWMA_2_DIFFICULTY_BLOCK_INDEX_V3
 const uint64_t DIFFICULTY_CHANGE_BLOCK_INDEX                 = 220700;
 
 const unsigned EMISSION_SPEED_FACTOR                         = 26; // This is not used any more (difrent block reward algo)
@@ -68,13 +68,13 @@ const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT = CRYPTONOTE_BL
 const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
 
 const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 2; // :)
-const uint64_t MINIMUM_FEE                                   = UINT64_C(1);
+const uint64_t MINIMUM_FEE                                   = UINT64_C(10);
 
 /* This section defines our minimum and maximum mixin counts required for transactions */
 const uint64_t MINIMUM_MIXIN_V1                              = 0;
 const uint64_t MAXIMUM_MIXIN_V1                              = 7;
 
-const uint64_t MINIMUM_MIXIN_V2                              = 4;
+const uint64_t MINIMUM_MIXIN_V2                              = 3;
 const uint64_t MAXIMUM_MIXIN_V2                              = 7;
 
 const uint64_t MINIMUM_MIXIN_V3                              = 3;
@@ -112,12 +112,12 @@ const size_t   DIFFICULTY_LAG_V1                             = 15;
 const size_t   DIFFICULTY_LAG_V2                             = 15;
 static_assert(2 * DIFFICULTY_CUT <= DIFFICULTY_WINDOW - 2, "Bad DIFFICULTY_WINDOW or DIFFICULTY_CUT");
 
-const size_t   MAX_BLOCK_SIZE_INITIAL                        = 100000;
+const size_t   MAX_BLOCK_SIZE_INITIAL                        = 64000;
 const uint64_t MAX_BLOCK_SIZE_GROWTH_SPEED_NUMERATOR         = 100 * 1024;
 const uint64_t MAX_BLOCK_SIZE_GROWTH_SPEED_DENOMINATOR       = 365 * 24 * 60 * 60 / DIFFICULTY_TARGET;
-const uint64_t MAX_EXTRA_SIZE                                = 140000;
+const uint64_t MAX_EXTRA_SIZE                                = 80000;
 const uint64_t MAX_EXTRA_SIZE_V2                             = 1024;
-const uint64_t MAX_EXTRA_SIZE_V2_HEIGHT                      = 1300000;
+const uint64_t MAX_EXTRA_SIZE_V2_HEIGHT                      = 1000000;
 
 /* For new projects forked from this code base, the values immediately below
    should be changed to 0 to prevent issues with transaction processing 
@@ -147,7 +147,7 @@ const uint32_t UPGRADE_HEIGHT_V5                             = 4; // Upgrade hei
 
 const uint32_t UPGRADE_HEIGHT_CURRENT                        = UPGRADE_HEIGHT_V5; 
 
-const unsigned UPGRADE_VOTING_THRESHOLD                      = 95;               // percent
+const unsigned UPGRADE_VOTING_THRESHOLD                      = 90;               // percent
 const uint32_t UPGRADE_VOTING_WINDOW                         = EXPECTED_NUMBER_OF_BLOCKS_PER_DAY;  // blocks
 const uint32_t UPGRADE_WINDOW                                = EXPECTED_NUMBER_OF_BLOCKS_PER_DAY;  // blocks
 static_assert(0 < UPGRADE_VOTING_THRESHOLD && UPGRADE_VOTING_THRESHOLD <= 100, "Bad UPGRADE_VOTING_THRESHOLD");
@@ -155,7 +155,7 @@ static_assert(UPGRADE_VOTING_WINDOW > 1, "Bad UPGRADE_VOTING_WINDOW");
 
 /* Block heights we are going to have hard forks at */
 const uint64_t FORK_HEIGHTS[] =
-{};
+{}; // THIS FUCK CAN'T BE EMPTY; THIS WONT COMPILE
 
 /* MAKE SURE TO UPDATE THIS VALUE WITH EVERY MAJOR RELEASE BEFORE A FORK */
 const uint64_t SOFTWARE_SUPPORTED_FORK_INDEX                 = 0;
@@ -219,7 +219,7 @@ const uint8_t P2P_LITE_BLOCKS_PROPOGATION_VERSION            = 4;
 const uint8_t  P2P_UPGRADE_WINDOW                            = 1;
 
 const size_t   P2P_CONNECTION_MAX_WRITE_BUFFER_SIZE          = 32 * 1024 * 1024; // 32 MB
-const uint32_t P2P_DEFAULT_CONNECTIONS_COUNT                 = 8;
+const uint32_t P2P_DEFAULT_CONNECTIONS_COUNT                 = 8;             // MAKE THIS BIGGER WHEN PLANNING ON A LARGE AMOUT OF NODES
 const size_t   P2P_DEFAULT_WHITELIST_CONNECTIONS_PERCENT     = 70;
 const uint32_t P2P_DEFAULT_HANDSHAKE_INTERVAL                = 60;            // seconds
 const uint32_t P2P_DEFAULT_PACKET_MAX_SIZE                   = 50000000;      // 50000000 bytes maximum packet size
