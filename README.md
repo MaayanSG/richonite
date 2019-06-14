@@ -1,15 +1,15 @@
 ![image](https://avatars3.githubusercontent.com/u/45854820?s=200&v=4)
 
-# Kegcoin Gold
+# Richonite
 
 Kegcoin Gold is a ASIC resistant altcoin made with value and cheap transactions in mind, it has a block time of 30 seconds and low fees. It uses it's own algorithm called [keghash](https://github.com/LeoCornelius/keghash).
 
 | **General** | **Master build status** | **Development build status** |
 |-------------|-------------------------|------------------------------|
-| ![GitHub repo size](https://img.shields.io/github/repo-size/kegcoin-project/kegcoin-gold.svg?label=Repository%20size%3A&style=popout-square) | [![Travis master branch](https://img.shields.io/travis/kegcoin-project/kegcoin-gold/master.svg?label=TravisCI&style=popout-square)](https://travis-ci.org/kegcoin-project/kegcoin-gold) | [![Travis development branch](https://img.shields.io/travis/kegcoin-project/kegcoin-gold/development.svg?label=TravisCI&style=popout-square)](https://travis-ci.org/kegcoin-project/kegcoin-gold) |
-| [![GitHub issues](https://img.shields.io/github/issues-raw/kegcoin-project/kegcoin-gold.svg?label=Issues%20that%20need%20help%3A&style=popout-square)](https://github.com/kegcoin-project/kegcoin-gold/issues) | [![AppVeyor master branch](https://img.shields.io/appveyor/ci/TheDevMinerTV/kegcoin-gold/master.svg?label=AppVeyor&style=popout-square)](https://ci.appveyor.com/project/TheDevMinerTV/kegcoin-gold) | [![AppVeyor development branch](https://img.shields.io/appveyor/ci/TheDevMinerTV/kegcoin-gold/development.svg?label=AppVeyor&style=popout-square)](https://ci.appveyor.com/project/TheDevMinerTV/kegcoin-gold) |
-| [![GitHub Releases](https://img.shields.io/github/downloads/kegcoin-project/kegcoin-gold/total.svg?style=flat-square)](https://github.com/kegcoin-project/kegcoin-gold/releases) | | |
-| [![Discord](https://img.shields.io/discord/546368529579114517.svg?label=Discord&style=popout-square)](https://discord.gg/WffDKjF) | | |
+| ![GitHub repo size](https://img.shields.io/github/repo-size/richonite/richonite.svg?label=Repository%20size%3A&style=popout-square) | [![Travis master branch](https://img.shields.io/travis/richonite/richonite/master.svg?label=TravisCI&style=popout-square)](https://travis-ci.org/richonite/richonite) | [![Travis development branch](https://img.shields.io/travis/richonite/richonite/development.svg?label=TravisCI&style=popout-square)](https://travis-ci.org/richonite/richonite) |
+| [![GitHub issues](https://img.shields.io/github/issues-raw/richonite/richonite.svg?label=Issues%20that%20need%20help%3A&style=popout-square)](https://github.com/richonite/richonite/issues) | [![AppVeyor master branch](https://img.shields.io/appveyor/ci/TheDevMinerTV/richonite/master.svg?label=AppVeyor&style=popout-square)](https://ci.appveyor.com/project/TheDevMinerTV/kegcoin-gold) | [![AppVeyor development branch](https://img.shields.io/appveyor/ci/TheDevMinerTV/kegcoin-gold/development.svg?label=AppVeyor&style=popout-square)](https://ci.appveyor.com/project/TheDevMinerTV/kegcoin-gold) |
+| [![GitHub Releases](https://img.shields.io/github/downloads/richonite/richonite/total.svg?style=flat-square)](https://github.com/richonite/richonite/releases) | | |
+| [![Discord](https://img.shields.io/discord/574576489023143947.svg?label=Discord&style=popout-square)](https://discord.gg/BXAn8uk) | | |
 
 ### How To Compile
 
@@ -34,8 +34,8 @@ If you are using Clang, you will need Clang 6.0 or higher. You will also need li
 - `sudo pip install cmake`
 - `export CC=gcc-8`
 - `export CXX=g++-8`
-- `git clone -b master --single-branch https://github.com/kegcoin-project/kegcoin-gold`
-- `cd kegcoingold`
+- `git clone -b master --single-branch https://github.com/richonite/richonite`
+- `cd richonite`
 - `mkdir build`
 - `cd build`
 - `cmake ..`
@@ -44,7 +44,7 @@ If you are using Clang, you will need Clang 6.0 or higher. You will also need li
 The binaries will be in the `src` folder when you are complete.
 
 - `cd src`
-- `./kegcoind --version`
+- `./richonited --version`
 
 ##### Ubuntu, using Clang
 
@@ -68,8 +68,8 @@ You need to modify the below command for your version of ubuntu - see https://ap
 - `sudo pip install cmake`
 - `export CC=clang-6.0`
 - `export CXX=clang++-6.0`
-- `git clone -b master --single-branch https://github.com/kegcoin-project/kegcoingold`
-- `cd kegcoingold`
+- `git clone -b master --single-branch https://github.com/richonite/richonite`
+- `cd richonite`
 - `mkdir build`
 - `cd build`
 - `cmake ..`
@@ -78,7 +78,7 @@ You need to modify the below command for your version of ubuntu - see https://ap
 The binaries will be in the `src` folder when you are complete.
 
 - `cd src`
-- `./kegcoind --version`
+- `./richonited --version`
 
 ##### Generic Linux
 
@@ -87,8 +87,8 @@ Ensure you have the dependencies listed above.
 If you want to use clang, ensure you set the environment variables `CC` and `CXX`.
 See the ubuntu instructions for an example.
 
-- `git clone -b master --single-branch https://github.com/kegcoin-project/kegcoingold`
-- `cd kegcoingold`
+- `git clone -b master --single-branch https://github.com/richonite/richonite`
+- `cd richonite`
 - `mkdir build`
 - `cd build`
 - `cmake ..`
@@ -97,7 +97,7 @@ See the ubuntu instructions for an example.
 The binaries will be in the `src` folder when you are complete.
 
 - `cd src`
-- `./kegcoind --version`
+- `./richonited --version`
 
 #### OSX/Apple, using GCC
 
@@ -111,8 +111,8 @@ The binaries will be in the `src` folder when you are complete.
 - `brew install --force cmake boost llvm gcc@8 openssl`
 - `export CC=gcc-8`
 - `export CXX=g++-8`
-- `git clone -b master --single-branch https://github.com/kegcoin-project/kegcoingold`
-- `cd kegcoingold`
+- `git clone -b master --single-branch https://github.com/richonite/richonite`
+- `cd richonite`
 - `mkdir build`
 - `cd build`
 - `cmake ..`
@@ -121,7 +121,7 @@ The binaries will be in the `src` folder when you are complete.
 The binaries will be in the `src` folder when you are complete.
 
 - `cd src`
-- `./kegcoind --version`
+- `./richonited --version`
 
 #### OSX/Apple, using Clang
 
@@ -135,8 +135,8 @@ The binaries will be in the `src` folder when you are complete.
 - `brew install --force cmake boost llvm openssl`
 - `export CC=/usr/local/opt/llvm/bin/clang`
 - `export CXX=/usr/local/opt/llvm/bin/clang++`
-- `git clone -b master --single-branch https://github.com/kegcoin-project/kegcoingold`
-- `cd kegcoingold`
+- `git clone -b master --single-branch https://github.com/richonite/richonite`
+- `cd richonite`
 - `mkdir build`
 - `cd build`
 - `cmake ..`
@@ -145,7 +145,7 @@ The binaries will be in the `src` folder when you are complete.
 The binaries will be in the `src` folder when you are complete.
 
 - `cd src`
-- `./kegcoind --version`
+- `./richonited --version`
 
 
 #### Windows
@@ -183,7 +183,7 @@ The binaries will be in the `src/Release` folder when you are complete.
 
 - `cd src`
 - `cd Release`
-- `kegcoind.exe --version`
+- `richonited.exe --version`
 
 #### Raspberry Pi 3 B+ (AARCH64/ARM64)
 The following images are known to work. Your operation system image **MUST** be 64 bit.
@@ -198,8 +198,8 @@ Once you have a 64 bit image installed, setup proceeds the same as any Linux dis
 
 ##### Building
 
-- `git clone -b master --single-branch https://github.com/kegcoin-project/kegcoingold`
-- `cd kegcoin`
+- `git clone -b master --single-branch https://github.com/richonite/richonite`
+- `cd richonite`
 - `mkdir build`
 - `cd build`
 - `cmake ..`
@@ -208,20 +208,21 @@ Once you have a 64 bit image installed, setup proceeds the same as any Linux dis
 The binaries will be in the `src` folder when you are complete.
 
 - `cd src`
-- `./kegcoind --version`
+- `./richonited --version`
 
 #### Thanks
-Cryptonote Developers, Bytecoin Developers, Monero Developers, Forknote Project, TurtleCoin Community and kegcoin gold evelopers
+Cryptonote Developers, Bytecoin Developers, Monero Developers, Forknote Project, TurtleCoin Community, kegcoin gold Developers and Richonite Developers
 
 ### Copypasta for license when editing files
 
-Hi Kegcoin Gold contributor, thanks for forking and sending back Pull Requests. Extensive docs about contributing are in the works or elsewhere. For now this is the bit we need to get into all the files we touch. Please add it to the top of the files.
+Hi Richonite contributor, thanks for forking and sending back Pull Requests. Extensive docs about contributing are in the works or elsewhere. For now this is the bit we need to get into all the files we touch. Please add it to the top of the files.
 
 ```
 // Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
 // Copyright (c) 2014-2018, The Monero Project
 // Copyright (c) 2018-2019, The TurtleCoin Developers
 // Copyright (c) 2019, The Kegcoin Gold Developers
+// Copyright (c) 2019, The Richonite Developers
 //
 // Please see the included LICENSE file for more information.
 ```
