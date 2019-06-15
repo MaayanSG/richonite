@@ -33,7 +33,7 @@ const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V3          = 11;
 
 // MONEY_SUPPLY - total number coins to be generated
-const uint64_t MONEY_SUPPLY                                  = (uint64_t)(-1); // Next to infinite.
+const uint64_t MONEY_SUPPLY                                  = (putsupplyhere); // change to something not infinite
 const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 0; // set to early on
 const size_t   ZAWY_DIFFICULTY_V2                            = 0;
 const uint8_t  ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION      = 3;
@@ -50,7 +50,7 @@ const unsigned EMISSION_SPEED_FACTOR                         = 26; // This is no
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
 /* Premine amount */
-const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(20000000000000); // 200000000000 RICH (2%)
+const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(0); // choose premine here 
 
 const char     GENESIS_COINBASE_TX_HEX[]                     = "010201ff00018080d287e2bc2d023e5430594ac34b1a2b8c6d4fa491b2924643a7a93170999e18195e0e2811f8e52101b7cfc86df8e52b7319068b6bdedd046646b240bde76849f0e2a443f7e84609be";
 static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
@@ -71,26 +71,15 @@ const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 2; // :)
 const uint64_t MINIMUM_FEE                                   = UINT64_C(10);
 
 /* This section defines our minimum and maximum mixin counts required for transactions */
-const uint64_t MINIMUM_MIXIN_V1                              = 0;
-const uint64_t MAXIMUM_MIXIN_V1                              = 7;
+const uint64_t MINIMUM_MIXIN_V0                              = 0;
+const uint64_t MAXIMUM_MIXIN_V0                              = 7;
 
-const uint64_t MINIMUM_MIXIN_V2                              = 3;
-const uint64_t MAXIMUM_MIXIN_V2                              = 7;
-
-const uint64_t MINIMUM_MIXIN_V3                              = 3;
-const uint64_t MAXIMUM_MIXIN_V3                              = 3;
-
-/* The heights to activate the mixin limits at */
-const uint32_t MIXIN_LIMITS_V1_HEIGHT                        = 0;
-const uint32_t MIXIN_LIMITS_V2_HEIGHT                        = 620000;
-const uint32_t MIXIN_LIMITS_V3_HEIGHT                        = 800000;
+/* The mixin to use by default with zedwallet and turtle-service */
+const uint64_t DEFAULT_MIXIN_V0                              = 3;
 
 /* The mixin to use by default with zedwallet and richonite-service */
 /* DEFAULT_MIXIN_V0 is the mixin used before MIXIN_LIMITS_V1_HEIGHT is started */
 const uint64_t DEFAULT_MIXIN_V0                              = 3;
-const uint64_t DEFAULT_MIXIN_V1                              = MAXIMUM_MIXIN_V1;
-const uint64_t DEFAULT_MIXIN_V2                              = MAXIMUM_MIXIN_V2;
-const uint64_t DEFAULT_MIXIN_V3                              = MAXIMUM_MIXIN_V3;
 
 const uint64_t DEFAULT_DUST_THRESHOLD                        = UINT64_C(100);
 const uint64_t DEFAULT_DUST_THRESHOLD_V2                     = UINT64_C(100);
@@ -155,8 +144,7 @@ static_assert(UPGRADE_VOTING_WINDOW > 1, "Bad UPGRADE_VOTING_WINDOW");
 
 /* Block heights we are going to have hard forks at */
 const uint64_t FORK_HEIGHTS[] =
-{  1,
-   2,}; // place holders
+{  1000000, // This is a better placeholder
 /* MAKE SURE TO UPDATE THIS VALUE WITH EVERY MAJOR RELEASE BEFORE A FORK */
 const uint64_t SOFTWARE_SUPPORTED_FORK_INDEX                 = 1;
 
@@ -242,7 +230,6 @@ const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
     {  0x18, 0x17, 0x87, 0x57, 0x65, 0x69, 0x69, 0x5e, 0x58, 0x32, 0x08, 0x68, 0x96, 0x1b, 0x05, 0x46  }
 };
 const char* const SEED_NODES[] = {
-    "mine2.live:24071", // Leo Cornelius 0 
-    "167.99.203.161:24071" // Leo Cornelius 1
+    "ip:port", // name of hoster goes here (Maayan knows a guy who will probably host if you need him)
 };
 } // CryptoNote
