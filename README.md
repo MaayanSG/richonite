@@ -2,7 +2,7 @@
 
 # Richonite
 
-Richonite is a ASIC resistant altcoin made with value and cheap transactions in mind, it has a block time of 30 seconds and low fees. It uses it's own algorithm called richnite.
+Richonite is a ASIC resistant altcoin made with value and cheap transactions in mind, it has a block time of 30 seconds and low fees. It uses Cryptonight-Turtle. 
 
 | **General** | **Master build status** | **Development build status** |
 |-------------|-------------------------|------------------------------|
